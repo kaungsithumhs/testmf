@@ -1,7 +1,15 @@
-import "./App.css";
-
 function App() {
-  return <p>Testing 123</p>;
+  return (
+    <p
+      style={{
+        color: "red",
+        fontSize: "30px",
+        fontWeight: "700",
+      }}
+    >
+      Testing 123
+    </p>
+  );
 }
 
 export default App;
