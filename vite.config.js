@@ -12,7 +12,7 @@ export default defineConfig({
       exposes: {
         "./home": "./src/App.jsx",
       },
-      shared: ["react", "react-dom", "react-router-dom"],
+      shared: ["react", "react-dom"],
     }),
   ],
   build: {
