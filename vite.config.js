@@ -8,7 +8,7 @@ export default defineConfig({
     federation({
       name: "chatBuyer",
       filename: "remoteEntry.js",
-      manifest: true,
+      manifest: false,
       exposes: {
         "./home": "./src/App.jsx",
       },
