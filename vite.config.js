@@ -17,7 +17,7 @@ export default defineConfig({
           singleton: true,
           requiredVersion: "^18.3.1",
         },
-        "react/": {
+        "react-dom": {
           singleton: true,
           requiredVersion: "^18.3.1",
         },
