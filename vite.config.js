@@ -6,7 +6,8 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "vite_provider",
+      name: "chatBuyer",
+      filename: "remoteEntry.js",
       manifest: true,
       exposes: {
         "./home": "./src/App.jsx",
