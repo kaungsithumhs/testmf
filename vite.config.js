@@ -13,7 +13,16 @@ export default defineConfig({
       exposes: {
         "./home": "./src/App.jsx",
       },
-      shared: ["react", "react-dom"],
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: "^18.3.1",
+        },
+        "react-dom": {
+          singleton: true,
+          requiredVersion: "^18.3.1",
+        },
+      },
     }),
   ],
   build: {
