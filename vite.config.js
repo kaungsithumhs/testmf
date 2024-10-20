@@ -1,5 +1,5 @@
 import { defineConfig } from "vite";
-import { federation } from "@module-federation/vite";
+import federation from "@originjs/vite-plugin-federation";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
@@ -8,9 +8,9 @@ export default defineConfig({
     federation({
       name: "chatBuyer",
       filename: "remoteEntry.js",
-      manifest: false,
+      manifest: true,
       exposes: {
-        "./home": "./src/App.jsx",
+        "./text": "./src/text.jsx",
       },
       shared: {
         react: {

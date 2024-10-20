@@ -1,15 +1,7 @@
+import Text from "./text";
+
 function App() {
-  return (
-    <p
-      style={{
-        color: "red",
-        fontSize: "30px",
-        fontWeight: "700",
-      }}
-    >
-      Testing 123
-    </p>
-  );
+  return <Text />;
 }
 
 export default App;
