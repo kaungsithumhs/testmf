@@ -12,7 +12,14 @@ export default defineConfig({
       exposes: {
         "./home": "./src/App.jsx",
       },
-      shared: ["react", "react-dom"],
+      shared: {
+        react: {
+          singleton: true,
+        },
+        "react/": {
+          singleton: true,
+        },
+      },
     }),
   ],
   build: {
