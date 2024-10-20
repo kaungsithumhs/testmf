@@ -1,15 +1,13 @@
 import { defineConfig } from "vite";
-// import { federation } from "@module-federation/vite";
+import { federation } from "@module-federation/vite";
 import react from "@vitejs/plugin-react";
-import federation from "@originjs/vite-plugin-federation";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "home",
-      filename: "remoteEntry.js",
+      name: "vite_provider",
+      manifest: true,
       exposes: {
         "./home": "./src/App.jsx",
       },
@@ -18,7 +16,7 @@ export default defineConfig({
           singleton: true,
           requiredVersion: "^18.3.1",
         },
-        "react-dom": {
+        "react/": {
           singleton: true,
           requiredVersion: "^18.3.1",
         },
