@@ -1,15 +1,10 @@
-function BootStrap() {
-  return (
-    <p
-      style={{
-        color: "red",
-        fontSize: "30px",
-        fontWeight: "700",
-      }}
-    >
-      Testing 123
-    </p>
-  );
-}
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App";
+import "./index.css";
 
-export default BootStrap;
+createRoot(document.getElementById("root")).render(
+  <StrictMode>
+    <App />
+  </StrictMode>
+);
