@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
-import { federation } from "@module-federation/vite";
+// import { federation } from "@module-federation/vite";
 import react from "@vitejs/plugin-react";
+import federation from "@originjs/vite-plugin-federation";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -12,14 +13,7 @@ export default defineConfig({
       exposes: {
         "./home": "./src/App.jsx",
       },
-      shared: {
-        react: {
-          singleton: true,
-        },
-        "react/": {
-          singleton: true,
-        },
-      },
+      shared: ["react", "react-dom"],
     }),
   ],
   build: {
